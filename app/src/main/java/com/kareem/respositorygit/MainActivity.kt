@@ -29,7 +29,7 @@ class MainActivity : AppCompatActivity() {
 
         val retrofit = builder.build()
         val client = retrofit.create<GitClient>(GitClient::class.java)
-        val call = client.reposUser("kareem96")
+        val call = client.reposUser("kareem96") //username github
 
         call.enqueue(object : Callback<List<GitRepo>>{
             override fun onResponse(call: Call<List<GitRepo>>, response: Response<List<GitRepo>>) {
